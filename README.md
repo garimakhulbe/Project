@@ -1,2 +1,2 @@
 # Project
-Auto scale up the Swarm cluster when cluster CPU usage is high.
+Auto scale up feature for the Swarm cluster.
