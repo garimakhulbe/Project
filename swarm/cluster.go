@@ -8,6 +8,7 @@ import (
 	"sort"
 	"strings"
 	"sync"
+	"time"
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/docker/docker/pkg/stringid"
@@ -164,8 +165,18 @@ func (c *Cluster) addEngine(addr string) bool {
 	// Attempt a connection to the engine. Since this is slow, don't get a hold
 	// of the lock yet.
 	engine := cluster.NewEngine(addr, c.overcommitRatio)
-	if err := engine.Connect(c.TLSConfig); err != nil {
-		log.Error(err)
+	
+	var er error
+	for retry := 1; retry <= 3; retry++ {
+		<-time.After(15*time.Second)
+		if er = engine.Connect(c.TLSConfig); er == nil {
+			break
+		}
+		log.Debugf("%v", er)		
+	}
+	
+	if er != nil {
+		log.Error(er)
 		return false
 	}
 
