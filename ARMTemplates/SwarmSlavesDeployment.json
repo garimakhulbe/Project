@@ -175,7 +175,7 @@
                     },
                     "compose":{
                         "autoscale":{
-                            "image":"garima0079/autoscale1",
+                            "image":"garima0079/autoscale:v1",
                             "restart":"always",
                             "environment":[
                                 "[concat('HOST_VM=',concat(variables('vmNameSlave'), copyIndex()))]",
