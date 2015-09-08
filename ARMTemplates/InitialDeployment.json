@@ -85,14 +85,12 @@
         },
         "storageAccount":{
             "type":"string",
-            "defaultValue":"testintern12",
             "metadata":{
                 "description":"Storage Account to store monitoring data."
             }
         },
         "storageKey":{
             "type":"string",
-            "defaultValue":"ZHov2Htl0eqTuW2qgTDf8fbmEG0abnReGv7sa61m+CpbTjRt/qazGUgvlyNKsMyJk1jZYymIpY2kR4aA7YrNLA==",
             "metadata":{
                 "description":"Storage key to access storage account."
             }
