@@ -71,14 +71,12 @@
         },
         "subscriptionId":{
             "type":"string",
-            "defaultValue":"5f20c827-31e2-4f17-9127-da8968795689",
             "metadata":{
                 "description":"Subscription id"
             }
         },
         "tenantId":{
             "type":"string",
-            "defaultValue":"72f988bf-86f1-41af-91ab-2d7cd011db47",
             "metadata":{
                 "description":"Tenant id"
             }
