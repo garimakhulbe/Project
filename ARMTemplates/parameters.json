@@ -14,20 +14,17 @@
         "dnsNameForPublicIP":{
             "value":""
         },
-        "ubuntuOSVersion":{
-            "value":""
-        },
         "slaveCount":{
-            "value":""
+            "value": 3
         },
         "swarmClusterId":{
             "value":""
         },
         "nodeCount":{
-            "value":""
+            "value": 1
         },
         "upperThresholdForCPUUsage":{
-            "value":""
+            "value": 80
         },
         "clientId":{
             "value":""
