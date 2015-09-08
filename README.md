@@ -1,2 +1,2 @@
 # Project
-Scale up the Swarm cluster on high CPU usage of slave nodes.
+Auto scale up the Swarm cluster when cluster CPU usage is high.
