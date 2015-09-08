@@ -17,7 +17,6 @@
         },
         "adminPassword":{
             "type":"string",
-            "defaultValue":"Abcd1234@",
             "metadata":{
                 "description":"Password for the Virtual Machine."
             }
@@ -57,14 +56,12 @@
         },
         "clientId":{
             "type":"string",
-            "defaultValue":"619523f4-e9b7-4234-adae-a868b1ce6870",
             "metadata":{
                 "description":"Client Id"
             }
         },
         "clientSecret":{
             "type":"string",
-            "defaultValue":"Abcd1234@",
             "metadata":{
                 "description":"Client secret"
             }
