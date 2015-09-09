@@ -340,7 +340,7 @@
                             "ports":[
                                 "2376:2375"
                             ],
-                            "command":"[concat('--debug manage token://',parameters('swarmClusterId'))]"
+                            "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
                         }
                     }
                 }
