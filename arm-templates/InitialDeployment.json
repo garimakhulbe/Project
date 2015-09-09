@@ -357,7 +357,7 @@
             "properties":{
                 "mode":"Incremental",
                 "templateLink":{
-                    "uri":"https://raw.githubusercontent.com/garimakhulbe/azure-template/master/autoscaletemplate/SwarmSlavesDeployment.json",
+                    "uri":"https://raw.githubusercontent.com/garimakhulbe/azure-template/master/autoscaletemplate/SwarmSlaveDeployment.json",
                     "contentVersion":"1.0.0.0"
                 },
                 "parameters":{
