@@ -358,7 +358,6 @@ function start() {
             autoscale = new AutoscaleAgentOperations(process.argv[3]);
             autoscale.startAgent(function (err) {
                 if (err) {
-                    console.log("startagent");
                     log.error(err.message);
                 }
             });
@@ -366,7 +365,6 @@ function start() {
             autoscale = new AutoscaleNodeOperations(process.argv[3]);
             autoscale.startClient(function (err) {
                 if (err) {
-                    console.log("startclient");
                     log.error(err.message);
                 }
             });
