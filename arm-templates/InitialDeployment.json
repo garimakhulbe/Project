@@ -329,6 +329,7 @@
                         "autoscale":{
                             "image":"garima0079/swarmautoscale:v1",
                             "restart":"always",
+                            "links":["swarm"],
                             "environment":[
                                 "[concat('TENANT=',parameters('tenantId'))]",
                                 "[concat('SUBSCRIPTION=',parameters('subscriptionId'))]",
@@ -336,7 +337,7 @@
                                 "[concat('CLIENT_SECRET=',parameters('clientSecret'))]",
                                 "[concat('STORAGE_ACCOUNT=',parameters('storageAccount'))]",
                                 "[concat('STORAGE_KEY=',parameters('storageKey'))]",
-                                "[concat('SWARM_MASTER_PORT=',reference(concat(variables('vmNameMaster'), '-nic')).ipConfigurations[0].properties.privateIPAddress, ':2375')]"
+                                "[concat('SWARM_MASTER1_PORT=',reference(concat(variables('vmNameMaster'), '-nic')).ipConfigurations[0].properties.privateIPAddress, ':2375')]"
                             ],
                             "command":"[resourceGroup().name]"
                         }
