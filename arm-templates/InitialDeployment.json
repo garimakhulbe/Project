@@ -334,7 +334,7 @@
                                 "[concat('STORAGE_ACCOUNT=',parameters('storageAccount'))]",
                                 "[concat('STORAGE_KEY=',parameters('storageKey'))]"
                             ],
-                            "command":"[concat('agent ', resourceGroup().name)]"
+                            "command":"[resourceGroup().name]"
                         },
                         "swarm":{
                             "image":"garima0079/swarm",
