@@ -329,7 +329,6 @@
                         "autoscale":{
                             "image":"garima0079/swarmautoscale:v1",
                             "restart":"always",
-                            "links":["compose_swarm_1:swarm_master"],
                             "environment":[
                                 "[concat('TENANT=',parameters('tenantId'))]",
                                 "[concat('SUBSCRIPTION=',parameters('subscriptionId'))]",
