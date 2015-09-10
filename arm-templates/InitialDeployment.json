@@ -324,7 +324,7 @@
                         "swarm":{
                             "image":"garima0079/swarm",
                             "restart":"always",
-                            "name":["swarm_master"],
+                            "name":"swarm_master",
                             "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
                         }
                     }
