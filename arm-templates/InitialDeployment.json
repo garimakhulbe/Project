@@ -329,21 +329,6 @@
                             ],
                             "name":["swarm_master"],
                             "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
-                        },
-                        "autoscale":{
-                            "image":"garima0079/swarmautoscale:v1",
-                            "restart":"always",
-                            "name":["swarm_autoscale"],
-                            "links":["swarm_master:swarm_master"],
-                            "environment":[
-                                "[concat('TENANT=',parameters('tenantId'))]",
-                                "[concat('SUBSCRIPTION=',parameters('subscriptionId'))]",
-                                "[concat('CLIENT_ID=',parameters('clientId'))]",
-                                "[concat('CLIENT_SECRET=',parameters('clientSecret'))]",
-                                "[concat('STORAGE_ACCOUNT=',parameters('storageAccount'))]",
-                                "[concat('STORAGE_KEY=',parameters('storageKey'))]"
-                            ],
-                            "command":"[resourceGroup().name]"
                         }
                     }
                 }
