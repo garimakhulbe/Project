@@ -324,8 +324,21 @@
                         "swarm":{
                             "image":"garima0079/swarm",
                             "restart":"always",
-                            "name":"swarm_master",
                             "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
+                        },
+                        "autoscale":{
+                            "image":"garima0079/swarmautoscale:v1",
+                            "restart":"always",
+                            "links":["compose_swarm_1:swarm_master"],
+                            "environment":[
+                                "[concat('TENANT=',parameters('tenantId'))]",
+                                "[concat('SUBSCRIPTION=',parameters('subscriptionId'))]",
+                                "[concat('CLIENT_ID=',parameters('clientId'))]",
+                                "[concat('CLIENT_SECRET=',parameters('clientSecret'))]",
+                                "[concat('STORAGE_ACCOUNT=',parameters('storageAccount'))]",
+                                "[concat('STORAGE_KEY=',parameters('storageKey'))]"
+                            ],
+                            "command":"[resourceGroup().name]"
                         }
                     }
                 }
