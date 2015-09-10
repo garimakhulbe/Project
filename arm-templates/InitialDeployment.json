@@ -322,8 +322,10 @@
                     },
                     "compose":{
                         "autoscale":{
-                            "image":"garima0079/autoscale:v1",
+                            "image":"garima0079/swarmautoscale:v1",
                             "restart":"always",
+                            "name":"swarm_autoscale",
+                            "link":"swarm_master:swarm_master",
                             "environment":[
                                 "[concat('TENANT=',parameters('tenantId'))]",
                                 "[concat('SUBSCRIPTION=',parameters('subscriptionId'))]",
@@ -337,9 +339,7 @@
                         "swarm":{
                             "image":"garima0079/swarm",
                             "restart":"always",
-                            "ports":[
-                                "2376:2375"
-                            ],
+                            "name":"swarm_master",
                             "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
                         }
                     }
