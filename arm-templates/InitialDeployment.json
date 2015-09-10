@@ -325,7 +325,7 @@
                             "image":"garima0079/swarm",
                             "restart":"always",
                             "ports":[
-                                "2375:2375"
+                                "2375"
                             ],
                             "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
                         },
