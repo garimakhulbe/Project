@@ -219,7 +219,7 @@
                             "description":"Docker swarm endpoint",
                             "protocol":"Tcp",
                             "sourcePortRange":"*",
-                            "destinationPortRange":"2376",
+                            "destinationPortRange":"2375",
                             "sourceAddressPrefix":"*",
                             "destinationAddressPrefix":"*",
                             "access":"Allow",
