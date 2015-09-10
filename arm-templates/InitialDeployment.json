@@ -317,15 +317,12 @@
                 "type":"DockerExtension",
                 "typeHandlerVersion":"1.0",
                 "settings":{
-                    "docker":{
-                        "port":"2375"
-                    },
                     "compose":{
                         "swarm":{
                             "image":"garima0079/swarm",
                             "restart":"always",
                             "ports":[
-                                "2375"
+                                "2375:2375"
                             ],
                             "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
                         },
