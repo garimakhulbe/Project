@@ -330,6 +330,9 @@
                             "image":"garima0079/swarmautoscale:v1",
                             "restart":"always",
                             "links":["swarm"],
+                            "ports":[
+                                "2375:2375"
+                            ],
                             "environment":[
                                 "[concat('TENANT=',parameters('tenantId'))]",
                                 "[concat('SUBSCRIPTION=',parameters('subscriptionId'))]",
