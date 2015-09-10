@@ -336,7 +336,8 @@
                                 "[concat('CLIENT_ID=',parameters('clientId'))]",
                                 "[concat('CLIENT_SECRET=',parameters('clientSecret'))]",
                                 "[concat('STORAGE_ACCOUNT=',parameters('storageAccount'))]",
-                                "[concat('STORAGE_KEY=',parameters('storageKey'))]"
+                                "[concat('STORAGE_KEY=',parameters('storageKey'))]",
+                                "[concat('SWARM_MASTER_PORT=',parameters('storageKey'))]"
                             ],
                             "command":"[resourceGroup().name]"
                         }
