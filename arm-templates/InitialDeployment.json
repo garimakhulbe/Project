@@ -321,6 +321,15 @@
                         "port":"2375"
                     },
                     "compose":{
+                        "swarm":{
+                            "image":"garima0079/swarm",
+                            "restart":"always",
+                            "ports":[
+                                "2375:2375"
+                            ],
+                            "name":["swarm_master"],
+                            "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
+                        },
                         "autoscale":{
                             "image":"garima0079/swarmautoscale:v1",
                             "restart":"always",
@@ -335,15 +344,6 @@
                                 "[concat('STORAGE_KEY=',parameters('storageKey'))]"
                             ],
                             "command":"[resourceGroup().name]"
-                        },
-                        "swarm":{
-                            "image":"garima0079/swarm",
-                            "restart":"always",
-                            "ports":[
-                                "2375:2375"
-                            ],
-                            "name":["swarm_master"],
-                            "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
                         }
                     }
                 }
