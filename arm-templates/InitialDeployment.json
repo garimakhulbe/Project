@@ -337,7 +337,7 @@
                                 "[concat('CLIENT_SECRET=',parameters('clientSecret'))]",
                                 "[concat('STORAGE_ACCOUNT=',parameters('storageAccount'))]",
                                 "[concat('STORAGE_KEY=',parameters('storageKey'))]",
-                                "[concat('SWARM_MASTER_PORT=',parameters('storageKey'))]"
+                                "[concat('SWARM_MASTER_PORT=',reference(concat(variables('vmNameMaster'), '-nic')).ipConfigurations[0].properties.privateIPAddress, ':2375')]"
                             ],
                             "command":"[resourceGroup().name]"
                         }
