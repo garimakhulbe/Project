@@ -174,16 +174,6 @@
                         "port":"2375"
                     },
                     "compose":{
-                        "autoscale":{
-                            "image":"garima0079/autoscale:v1",
-                            "restart":"always",
-                            "environment":[
-                                "[concat('HOST_VM=',concat(variables('vmNameSlave'), copyIndex()))]",
-                                "[concat('STORAGE_ACCOUNT=',parameters('storageAccount'))]",
-                                "[concat('STORAGE_KEY=',parameters('storageKey'))]"
-                            ],
-                            "command":"[concat('client ', resourceGroup().name)]"
-                        },
                         "swarm":{
                             "image":"garima0079/swarm",
                             "restart":"always",
