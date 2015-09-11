@@ -356,7 +356,7 @@
             "properties":{
                 "mode":"Incremental",
                 "templateLink":{
-                    "uri":"https://raw.githubusercontent.com/garimakhulbe/Project/master/arm-templates/SwarmSlavesDeployment.json",
+                    "uri":"https://raw.githubusercontent.com/garimakhulbe/Project/dev/arm-templates/SwarmSlaveDeployment.json",
                     "contentVersion":"1.0.0.0"
                 },
                 "parameters":{
