@@ -93,7 +93,7 @@
     },
     "variables":{
         "vmNameMaster":"swarm-master",
-        "vmSizeMaster":"Standard_A0",
+        "vmSizeMaster":"Standard_A4",
         "availabilitySetMaster":"swarm-master-set",
         "availabilitySetSlaves":"swarm-nodes-set",
         "osImagePublisher":"CoreOS",
