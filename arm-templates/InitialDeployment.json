@@ -228,7 +228,7 @@
                         }
                     },
                     {
-                        "name":"SwarmManagementPort",
+                        "name":"Jenkins",
                         "properties":{
                             "description":"Jenkins",
                             "protocol":"Tcp",
