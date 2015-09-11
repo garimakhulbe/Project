@@ -226,6 +226,20 @@
                             "priority":100,
                             "direction":"Inbound"
                         }
+                    },
+                    {
+                        "name":"SwarmManagementPort",
+                        "properties":{
+                            "description":"Jenkins",
+                            "protocol":"Tcp",
+                            "sourcePortRange":"*",
+                            "destinationPortRange":"80",
+                            "sourceAddressPrefix":"*",
+                            "destinationAddressPrefix":"*",
+                            "access":"Allow",
+                            "priority":300,
+                            "direction":"Inbound"
+                        }
                     }
                 ]
             }
