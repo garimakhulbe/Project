@@ -341,7 +341,7 @@
                             "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
                         },
                         "autoscale":{
-                            "image":"garima0079/swarmautoscale:v1",
+                            "image":"garima0079/swarmautoscale:v2",
                             "restart":"always",
                             "links":["swarm"],
                             "environment":[
