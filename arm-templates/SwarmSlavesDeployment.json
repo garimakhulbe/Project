@@ -38,6 +38,13 @@
             "metadata":{
                 "description":"Swarm cluster id"
             }
+        },
+        "nodeCount":{
+            "type":"Int",
+            "defaultValue":1,
+            "metadata":{
+                "description":"Number of nodes for autoscale operation."
+            }
         }
     },
     "variables":{
