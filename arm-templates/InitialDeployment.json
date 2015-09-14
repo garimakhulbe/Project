@@ -386,6 +386,9 @@
                     },
                     "swarmClusterId":{
                         "value":"[parameters('swarmClusterId')]"
+                    },
+                    "nodeCount":{
+                        "value":"[parameters('nodeCount')]"
                     }
                 }
             }
