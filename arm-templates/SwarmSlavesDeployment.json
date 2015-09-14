@@ -26,43 +26,10 @@
                 "description":"Unique DNS Name for the Public IP used to accessthe Virtual Machine."
             }
         },
-        "slaveCount":{
-            "type":"int",
-            "defaultValue":1,
-            "metadata":{
-                "description":"Number of slave nodes"
-            }
-        },
         "swarmClusterId":{
             "type":"string",
             "metadata":{
                 "description":"Swarm cluster id"
-            }
-        },
-        "nodeCount":{
-            "type":"Int",
-            "defaultValue":1,
-            "metadata":{
-                "description":"Node count for autoscale"
-            }
-        },
-        "upperThresholdForCPUUsage":{
-            "type":"Int",
-            "defaultValue":80,
-            "metadata":{
-                "description":"Upper threshold of the CPU usage for autoscaling"
-            }
-        },
-        "storageAccount":{
-            "type":"string",
-            "metadata":{
-                "description":"Storage Account to store CPU usage"
-            }
-        },
-        "storageKey":{
-            "type":"string",
-            "metadata":{
-                "description":"Storage key to access storage account"
             }
         }
     },
