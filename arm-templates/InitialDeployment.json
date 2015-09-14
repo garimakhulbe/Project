@@ -16,7 +16,7 @@
             }
         },
         "adminPassword":{
-            "type":"string",
+            "type":"securestring",
             "metadata":{
                 "description":"Password for the Virtual Machine."
             }
@@ -47,9 +47,15 @@
                 "description":"Number of nodes for autoscale operation."
             }
         },
-        "upperThresholdForCPUUsage":{
-            "type":"Int",
-            "defaultValue":80,
+        "autoscaleCriteria":{
+            "type":"String",
+            "defaultValue":"cpu",
+            "metadata":{
+                "description":"Criteria for autoscaling - Memory or cpu"
+            }
+        },
+        "autoscaleRule":{
+            "type":"String",
             "metadata":{
                 "description":"Upper threshold of the CPU usage for autoscaling"
             }
@@ -76,18 +82,6 @@
             "type":"string",
             "metadata":{
                 "description":"Tenant id"
-            }
-        },
-        "storageAccount":{
-            "type":"string",
-            "metadata":{
-                "description":"Storage Account to store monitoring data."
-            }
-        },
-        "storageKey":{
-            "type":"string",
-            "metadata":{
-                "description":"Storage key to access storage account."
             }
         }
     },
@@ -348,12 +342,9 @@
                                 "[concat('TENANT=',parameters('tenantId'))]",
                                 "[concat('SUBSCRIPTION=',parameters('subscriptionId'))]",
                                 "[concat('CLIENT_ID=',parameters('clientId'))]",
-                                "[concat('CLIENT_SECRET=',parameters('clientSecret'))]",
-                                "[concat('STORAGE_ACCOUNT=',parameters('storageAccount'))]",
-                                "[concat('STORAGE_KEY=',parameters('storageKey'))]",
-                                "[concat('SWARM_MASTER1_PORT=',reference(concat(variables('vmNameMaster'), '-nic')).ipConfigurations[0].properties.privateIPAddress, ':2375')]"
-                            ],
-                            "command":"[resourceGroup().name]"
+                                "[concat('CLIENT_SECRET=',parameters('clientSecret'))]"
+                                ],
+                            "command":"[concat(resourceGroup().name,' ',parameters('autoscaleCriteria')]"
                         }
                     }
                 }
@@ -386,23 +377,8 @@
                     "dnsNameForPublicIP":{
                         "value":"[parameters('dnsNameForPublicIP')]"
                     },
-                    "slaveCount":{
-                        "value":"[parameters('slaveCount')]"
-                    },
-                    "nodeCount":{
-                        "value":"[parameters('nodeCount')]"
-                    },
                     "swarmClusterId":{
                         "value":"[parameters('swarmClusterId')]"
-                    },
-                    "upperThresholdForCPUUsage":{
-                        "value":"[parameters('upperThresholdForCPUUsage')]"
-                    },
-                    "storageAccount":{
-                        "value":"[parameters('storageAccount')]"
-                    },
-                    "storageKey":{
-                        "value":"[parameters('storageKey')]"
                     }
                 }
             }
@@ -415,7 +391,7 @@
         },
         "SwarmManagerPort":{
             "type":"string",
-            "value":"2376"
+            "value":"2375"
         }
     }
 }
