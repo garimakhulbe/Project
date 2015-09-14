@@ -58,8 +58,8 @@
             }
         },
         "autoscaleRule":{
-            "type":"String",
-            "defaultValue":"1",
+            "type":"int",
+            "defaultValue":1,
             "metadata":{
                 "description":"Upper threshold of the CPU usage for autoscaling"
             }
