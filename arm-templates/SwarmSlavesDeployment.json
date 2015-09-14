@@ -49,7 +49,7 @@
     },
     "variables":{
         "vmNameSlave":"swarm-node-",
-        "vmSizeSlave":"Standard_A2",
+        "vmSizeSlave":"Standard_A3",
         "availabilitySetSlaves":"swarm-nodes-set",
         "osImagePublisher":"CoreOS",
         "osImageOffer":"CoreOS",
