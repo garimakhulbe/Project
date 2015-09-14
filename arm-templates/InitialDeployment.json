@@ -348,7 +348,7 @@
                                 "[concat('CLIENT_ID=',parameters('clientId'))]",
                                 "[concat('CLIENT_SECRET=',parameters('clientSecret'))]"
                                 ],
-                            "command":"[concat(resourceGroup().name,' ',parameters('autoscaleCriteria')]"
+                            "command":"[concat(resourceGroup().name,' ',parameters('autoscaleCriteria'))]"
                         }
                     }
                 }
