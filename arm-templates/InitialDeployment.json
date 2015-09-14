@@ -50,6 +50,10 @@
         "autoscaleCriteria":{
             "type":"String",
             "defaultValue":"cpu",
+            "allowedValues": [
+				"cpu",
+				"memory"
+			],
             "metadata":{
                 "description":"Criteria for autoscaling - Memory or cpu"
             }
