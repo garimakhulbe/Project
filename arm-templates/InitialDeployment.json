@@ -381,6 +381,9 @@
                     "dnsNameForPublicIP":{
                         "value":"[parameters('dnsNameForPublicIP')]"
                     },
+                    "slaveCount":{
+                        "value":"[parameters('slaveCount')]"
+                    },
                     "swarmClusterId":{
                         "value":"[parameters('swarmClusterId')]"
                     }
