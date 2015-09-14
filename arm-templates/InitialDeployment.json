@@ -71,7 +71,7 @@
             }
         },
         "clientSecret":{
-            "type":"string",
+            "type":"securestring",
             "metadata":{
                 "description":"Client secret"
             }
