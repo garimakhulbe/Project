@@ -26,6 +26,13 @@
                 "description":"Unique DNS Name for the Public IP used to accessthe Virtual Machine."
             }
         },
+	"slaveCount":{
+		"type":"int",
+		"defaultValue":1,
+		"metadata":{
+			"description":"Number of slave nodes"
+		}
+	},
         "swarmClusterId":{
             "type":"string",
             "metadata":{
