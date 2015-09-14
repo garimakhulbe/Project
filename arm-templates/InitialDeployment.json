@@ -49,7 +49,6 @@
         },
         "autoscaleCriteria":{
             "type":"String",
-            "defaultValue":"cpu",
             "allowedValues": [
 				"cpu",
 				"memory"
@@ -60,6 +59,7 @@
         },
         "autoscaleRule":{
             "type":"String",
+            "defaultValue":"1",
             "metadata":{
                 "description":"Upper threshold of the CPU usage for autoscaling"
             }
