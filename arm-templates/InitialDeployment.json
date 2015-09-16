@@ -57,13 +57,6 @@
                 "description":"Criteria for autoscaling - Memory or cpu"
             }
         },
-        "autoscaleRule":{
-            "type":"int",
-            "defaultValue":1,
-            "metadata":{
-                "description":"Rule for autoscale criteria."
-            }
-        },
         "clientId":{
             "type":"string",
             "metadata":{
@@ -339,7 +332,7 @@
                             "command":"[concat('--debug manage --strategy binpack token://',parameters('swarmClusterId'))]"
                         },
                         "autoscale":{
-                            "image":"garima0079/swarmautoscale:v3",
+                            "image":"garima0079/swarmautoscale:v4",
                             "restart":"always",
                             "links":["swarm"],
                             "environment":[
