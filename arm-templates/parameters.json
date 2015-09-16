@@ -37,12 +37,6 @@
         },
         "tenantId":{
             "value":""
-        },
-        "storageAccount":{
-            "value":""
-        },
-        "storageKey":{
-            "value":""
         }
     }
 }
