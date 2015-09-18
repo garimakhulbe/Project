@@ -50,7 +50,6 @@
     "variables":{
         "vmNameSlave":"swarm-node-",
         "vmSizeSlave":"Standard_A3",
-        "availabilitySetSlaves":"swarm-nodes-set",
         "osImagePublisher":"CoreOS",
         "osImageOffer":"CoreOS",
         "osImageSKU":"Stable",
@@ -98,9 +97,6 @@
                 "[concat('Microsoft.Network/networkInterfaces/', variables('vmNameSlave'), copyIndex(), '-nic')]"
             ],
             "properties":{
-                "availabilitySet":{
-                    "id":"[resourceId(resourceGroup().name,'Microsoft.Compute/availabilitySets',variables('availabilitySetSlaves'))]"
-                },
                 "hardwareProfile":{
                     "vmSize":"[variables('vmSizeSlave')]"
                 },
