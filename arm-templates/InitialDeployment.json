@@ -85,8 +85,6 @@
     "variables":{
         "vmNameMaster":"swarm-master",
         "vmSizeMaster":"Standard_A4",
-        "availabilitySetMaster":"swarm-master-set",
-        "availabilitySetSlaves":"swarm-nodes-set",
         "osImagePublisher":"CoreOS",
         "osImageOffer":"CoreOS",
         "osImageSKU":"Stable",
@@ -114,24 +112,6 @@
             "location":"[resourceGroup().location]",
             "properties":{
                 "accountType":"[variables('storageAccountType')]"
-            }
-        },
-        {
-            "type":"Microsoft.Compute/availabilitySets",
-            "name":"[variables('availabilitySetMaster')]",
-            "apiVersion":"2015-05-01-preview",
-            "location":"[resourceGroup().location]",
-            "properties":{
-
-            }
-        },
-        {
-            "type":"Microsoft.Compute/availabilitySets",
-            "name":"[variables('availabilitySetSlaves')]",
-            "apiVersion":"2015-05-01-preview",
-            "location":"[resourceGroup().location]",
-            "properties":{
-
             }
         },
         {
@@ -268,13 +248,9 @@
             "location":"[resourceGroup().location]",
             "dependsOn":[
                 "[concat('Microsoft.Storage/storageAccounts/', parameters('newStorageAccountName'))]",
-                "[concat('Microsoft.Network/networkInterfaces/', variables('vmNameMaster'), '-nic')]",
-                "[concat('Microsoft.Compute/availabilitySets/', variables('availabilitySetMaster'))]"
+                "[concat('Microsoft.Network/networkInterfaces/', variables('vmNameMaster'), '-nic')]"
             ],
             "properties":{
-                "availabilitySet":{
-                    "id":"[resourceId('Microsoft.Compute/availabilitySets',variables('availabilitySetMaster'))]"
-                },
                 "hardwareProfile":{
                     "vmSize":"[variables('vmSizeMaster')]"
                 },
